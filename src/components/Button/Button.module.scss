@@ -1,0 +1,84 @@
+.wrapper {
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 100px;
+    min-height: 36px;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    font-weight: 700;
+    line-height: 16px;
+
+    + .wrapper {
+        margin-left: 8px;
+    }
+}
+
+.primary {
+    background-color: var(--primary);
+    color: var(--white);
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+}
+
+.outline {
+    background-color: var(--white);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.outlineblackcolor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    color: rgb(22, 24, 35);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    .iconleft {
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+    }
+
+    .iconright {
+        height: 20px;
+        width: 20px;
+        margin-left: 8px;
+    }
+}
+
+.buttongetapp {
+    border-color: rgba(22, 24, 35, 0.12);
+    background: none rgb(255, 255, 255);
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    min-height: 32px;
+    border-radius: 52px;
+}
+//size button
+
+.small {
+    min-height: 28px;
+    padding: 0;
+    min-width: 88px;
+
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.large {
+    min-width: 324px;
+    min-height: 48px;
+
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
