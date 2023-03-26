@@ -11,6 +11,8 @@ function Button({
     primary = false,
     outline = false,
     outlineblackcolor = false,
+    text = false,
+    textmenu = false,
     small,
     large,
     children,
@@ -33,7 +35,16 @@ function Button({
         Comp = 'a';
     }
 
-    const classes = cx('wrapper', { buttongetapp, primary, outline, outlineblackcolor, small, large });
+    const classes = cx('wrapper', {
+        buttongetapp,
+        primary,
+        outline,
+        outlineblackcolor,
+        text,
+        textmenu,
+        small,
+        large,
+    });
     return (
         <Comp className={classes} {...props}>
             {lefticon && <span className={cx('iconleft')}>{lefticon}</span>}

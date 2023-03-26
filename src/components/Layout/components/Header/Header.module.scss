@@ -109,4 +109,12 @@
 .actions {
     display: flex;
     justify-content: space-between;
+
+    .more-btn {
+        margin-left: 9px;
+        cursor: pointer;
+        padding: 0px 10px;
+        background-color: transparent;
+        font-size: 18px;
+    }
 }

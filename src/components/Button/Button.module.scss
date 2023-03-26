@@ -41,12 +41,16 @@
     }
 
     .iconleft {
+        align-items: center;
+        display: inline-block;
         height: 20px;
         width: 20px;
         margin-right: 8px;
     }
 
     .iconright {
+        display: inline-block;
+        align-items: center;
         height: 20px;
         width: 20px;
         margin-left: 8px;
@@ -61,6 +65,50 @@
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
     min-height: 32px;
     border-radius: 52px;
+}
+
+.text {
+    background-color: transparent;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    .iconleft {
+        align-items: center;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+    }
+
+    .iconright {
+        align-items: center;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-left: 8px;
+    }
+}
+
+.textmenu {
+    background-color: transparent;
+
+    .iconleft {
+        align-items: center;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+    }
+
+    .iconright {
+        align-items: center;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-left: 8px;
+    }
 }
 //size button
 
