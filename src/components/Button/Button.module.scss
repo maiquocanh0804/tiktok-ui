@@ -43,7 +43,7 @@
     .iconleft {
         align-items: center;
         display: inline-block;
-        height: 20px;
+        height: 16px;
         width: 20px;
         margin-right: 8px;
     }
@@ -51,7 +51,7 @@
     .iconright {
         display: inline-block;
         align-items: center;
-        height: 20px;
+        height: 16px;
         width: 20px;
         margin-left: 8px;
     }
@@ -77,7 +77,7 @@
     .iconleft {
         align-items: center;
         display: inline-block;
-        height: 20px;
+        height: 16px;
         width: 20px;
         margin-right: 8px;
     }
@@ -85,13 +85,15 @@
     .iconright {
         align-items: center;
         display: inline-block;
-        height: 20px;
+        height: 16px;
         width: 20px;
         margin-left: 8px;
     }
 }
 
 .textmenu {
+    width: 100%;
+    display: flex;
     background-color: transparent;
 
     .iconleft {

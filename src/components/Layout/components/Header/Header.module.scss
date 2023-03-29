@@ -111,6 +111,7 @@
 .actions {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .more-btn {
         margin-left: 9px;
@@ -119,4 +120,26 @@
         background-color: transparent;
         font-size: 18px;
     }
+}
+
+.actions-btn {
+    color: #161823;
+    font-size: 2.1rem;
+    background-color: transparent;
+    padding: 4px 16px;
+    cursor: pointer;
+
+    .mess-btn {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
 }

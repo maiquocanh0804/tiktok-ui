@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import MenuItem from './MenuItem';
 import styles from './Menu.module.scss';
+
 import Header from './Header';
 import { useState } from 'react';
 
@@ -35,6 +36,7 @@ function Menu({ children, items = [], onChange = defaultFN }) {
 
     return (
         <Tippy
+            offset={[12, 8]}
             delay={[0, 700]}
             interactive
             placement="bottom-end"
@@ -53,6 +55,7 @@ function Menu({ children, items = [], onChange = defaultFN }) {
                     </PopperWrapper>
                 </div>
             )}
+            onHide={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>
