@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
     --primary: #fe2c55;
@@ -23,7 +22,7 @@ html {
 }
 
 body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'ProximaNova', 'sofiapro';
     // font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5rem;
@@ -42,7 +41,30 @@ a[href] {
     text-decoration: none;
 }
 
-body {
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/Fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/Fonts/ProximaNova-Semibold.woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url('/assets/Fonts/ProximaNova-Semibold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: sofiapro;
+    src: url('/assets/Fonts/sofiapro-bold.woff');
+    font-weight: 700;
+}
+s body {
     .tippy-box {
         border-radius: 8px;
         font-weight: 600;

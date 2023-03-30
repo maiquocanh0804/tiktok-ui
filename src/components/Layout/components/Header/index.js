@@ -27,7 +27,9 @@ import styles from './Header.module.scss';
 import AccountItem from '~/components/Popper/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import Image from '~/components/Image';
 import { faKeyboard, faUser } from '@fortawesome/free-regular-svg-icons';
+import { MessageIcon, UploadIcon } from '~/components/icons';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -149,12 +151,12 @@ function Header() {
                         <>
                             <Tippy content="Upload video">
                                 <button className={cx('actions-btn')}>
-                                    <FontAwesomeIcon icon={faArrowUpFromBracket} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                             <Tippy content="Message">
                                 <button className={cx('actions-btn')}>
-                                    <img className={cx('mess-btn')} src={images.iconmess} alt="icon" />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -168,10 +170,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : userMenu} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/2cdf78cb37c0a8eae5bd9bc88a38b7c2~c5_100x100.jpeg?x-expires=1680235200&x-signature=H3GW5PNb%2B7ExpYqTZpuDneFLKgY%3D"
+                            <Image
+                                src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-1/184304453_919930808580218_2897404288005860245_n.jpg?stp=dst-jpg_p160x160&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=6_fNhkGVcPwAX-o4hQz&_nc_oc=AQk0ALLikl_nHL8FYMZsRu-J2t7j-n1ji5DT20tozF9WK57RpoV46-mx9d0lUkmp_qM&_nc_ht=scontent.fdad1-4.fna&oh=00_AfAw7DQkkaa59tCCw25ZG4mUA79cV5NPICe23YMfLlHrAA&oe=644D29C7"
                                 className={cx('user-avatar')}
                                 alt="Name"
+                                // fallback="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
