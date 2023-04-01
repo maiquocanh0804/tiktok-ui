@@ -49,6 +49,19 @@
     transform: translateY(-50%);
 }
 
+.loading {
+    animation: sniper 0.7s linear infinite;
+}
+
+@keyframes sniper {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
 .search-btn {
     width: var(--search-button-width);
     height: 100%;
@@ -82,4 +95,9 @@
     font-size: 16px;
     line-height: 22px;
     color: rgb(22, 24, 35);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+    }
 }

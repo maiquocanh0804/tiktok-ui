@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleQuestion,
@@ -103,11 +102,13 @@ function Header() {
                             <Tippy content="Upload video">
                                 <button className={cx('actions-btn')}>
                                     <UploadIcon />
+                                    <sub className={cx('supBadge')}>3</sub>
                                 </button>
                             </Tippy>
                             <Tippy content="Message">
                                 <button className={cx('actions-btn')}>
                                     <MessageIcon />
+                                    <sub className={cx('supBadge')}>12</sub>
                                 </button>
                             </Tippy>
                         </>
