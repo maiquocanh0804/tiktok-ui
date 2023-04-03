@@ -6,6 +6,7 @@
 .container {
     line-height: normal;
     width: var(--default-layout-width);
+    margin-top: var(--default-layout-header-height);
     min-height: 1000px;
     // background-color: rgb(165, 99, 19);
     display: flex;

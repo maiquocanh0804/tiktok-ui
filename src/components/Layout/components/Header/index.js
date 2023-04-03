@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import {
     faCircleQuestion,
     faEarthAsia,
@@ -15,6 +16,8 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
+import routesConfig from '~/config/routes';
+
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
@@ -32,8 +35,84 @@ const MENU_ITEMS = [
             data: [
                 { code: 'en', title: 'English' },
                 {
-                    code: 'vn',
+                    code: '',
                     title: 'Tieng Viet',
+                },
+                {
+                    code: '',
+                    title: 'العربية',
+                },
+                {
+                    code: 'vn',
+                    title: 'বাঙ্গালি (ভারত)',
+                },
+                {
+                    code: 'Pilipinas',
+                    title: 'Cebuano (Pilipinas)',
+                },
+                {
+                    code: 'Česká republika',
+                    title: 'Čeština (Česká republika)',
+                },
+                {
+                    code: '',
+                    title: 'Deutsch',
+                },
+                {
+                    code: 'Ελλάδα',
+                    title: 'Ελληνικά (Ελλάδα)',
+                },
+                {
+                    code: '',
+                    title: 'Español',
+                },
+                {
+                    code: '',
+                    title: 'Tieng Viet',
+                },
+                {
+                    code: '',
+                    title: 'العربية',
+                },
+                {
+                    code: 'vn',
+                    title: 'বাঙ্গালি (ভারত)',
+                },
+                {
+                    code: 'Pilipinas',
+                    title: 'Cebuano (Pilipinas)',
+                },
+                {
+                    code: 'Česká republika',
+                    title: 'Čeština (Česká republika)',
+                },
+                {
+                    code: '',
+                    title: 'Deutsch',
+                },
+                {
+                    code: 'Ελλάδα',
+                    title: 'Ελληνικά (Ελλάδα)',
+                },
+                {
+                    code: '',
+                    title: 'Español',
+                },
+                {
+                    code: 'Česká republika',
+                    title: 'Čeština (Česká republika)',
+                },
+                {
+                    code: '',
+                    title: 'Deutsch',
+                },
+                {
+                    code: 'Ελλάδα',
+                    title: 'Ελληνικά (Ελλάδα)',
+                },
+                {
+                    code: '',
+                    title: 'Español',
                 },
             ],
         },
@@ -93,8 +172,11 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                        <Image src={images.logo} alt="Tiktok" />{' '}
+                    </Link>
                 </div>
+
                 <Search />
                 <div className={cx('actions')}>
                     {currentUser ? (

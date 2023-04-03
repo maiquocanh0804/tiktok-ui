@@ -94,8 +94,9 @@
 
 .textmenu {
     width: 100%;
-    display: flex;
     background-color: transparent;
+    flex-wrap: nowrap;
+    text-align: start;
 
     .iconleft {
         align-items: center;

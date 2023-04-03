@@ -43,46 +43,61 @@ function Search() {
     const handleHideResult = () => {
         setShowResult(false);
     };
-    return (
-        <HeadlessTippy
-            interactive
-            visible={showResult && searchResult.length > 0}
-            render={(attrs) => (
-                <div className={cx('search-result')} tabIndex="1" {...attrs}>
-                    <PopperWrapper>
-                        <h4 className={cx('search-title')}>Tài khoản</h4>
-                        {searchResult.map((result) => (
-                            <AccountItem key={result.id} data={result} />
-                        ))}
-                        {!!searchValue && (
-                            <h4 className={cx('suglist-item')}>Xem tất cả kết quả dành cho "{searchValue}"</h4>
-                        )}
-                    </PopperWrapper>
-                </div>
-            )}
-            onClickOutside={handleHideResult}
-        >
-            <div className={cx('search')}>
-                <input
-                    ref={inputRef}
-                    value={searchValue}
-                    onChange={(e) => setSearchValue(e.target.value)}
-                    onFocus={() => setShowResult(true)}
-                    placeholder="Tìm kiếm tài khoản và video"
-                    spellCheck="false"
-                />
-                {!!searchValue && !loading && (
-                    <button className={cx('clear')} onClick={handlClear}>
-                        <FontAwesomeIcon icon={faCircleXmark} />
-                    </button>
-                )}
-                {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
 
-                <button className={cx('search-btn')}>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
-            </div>
-        </HeadlessTippy>
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
+    };
+
+    return (
+        <div>
+            <HeadlessTippy
+                interactive
+                visible={showResult && searchResult.length > 0}
+                render={(attrs) => (
+                    <div className={cx('search-result')} tabIndex="1" {...attrs}>
+                        <PopperWrapper>
+                            <h4 className={cx('search-title')}>Tài khoản</h4>
+                            {searchResult.map((result) => (
+                                <AccountItem key={result.id} data={result} />
+                            ))}
+                            {!!searchValue && (
+                                <h4 className={cx('suglist-item')}>Xem tất cả kết quả dành cho "{searchValue}"</h4>
+                            )}
+                        </PopperWrapper>
+                    </div>
+                )}
+                onClickOutside={handleHideResult}
+            >
+                <div className={cx('search')}>
+                    <input
+                        ref={inputRef}
+                        value={searchValue}
+                        onChange={handleChange}
+                        onFocus={() => setShowResult(true)}
+                        placeholder="Tìm kiếm tài khoản và video"
+                        spellCheck="false"
+                    />
+                    {!!searchValue && !loading && (
+                        <button className={cx('clear')} onClick={handlClear}>
+                            <FontAwesomeIcon icon={faCircleXmark} />
+                        </button>
+                    )}
+                    {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
+
+                    <button
+                        className={cx('search-btn')}
+                        onMouseDown={(e) => {
+                            e.preventDefault();
+                        }}
+                    >
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
+                </div>
+            </HeadlessTippy>
+        </div>
     );
 }
 
