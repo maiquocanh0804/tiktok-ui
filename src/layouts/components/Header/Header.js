@@ -23,7 +23,7 @@ import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import { faKeyboard, faUser } from '@fortawesome/free-regular-svg-icons';
 import { MessageIcon, UploadIcon } from '~/components/icons';
-import Search from './Search';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
