@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/Services/searchServices';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import HeadlessTippy from '@tippyjs/react/headless';
 import AccountItem from '~/components/Popper/AccountItem';
